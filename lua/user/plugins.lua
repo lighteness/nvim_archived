@@ -71,6 +71,7 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-cmdline" -- cmdline completions
   use "saadparwaiz1/cmp_luasnip" -- snippet completions
   use "hrsh7th/cmp-nvim-lsp"
+  use "onsails/lspkind.nvim" -- display the fancy icons to completion-menu with lspkind-nvim.
 
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine
@@ -83,7 +84,7 @@ return packer.startup(function(use)
   --use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
 --
   ---- Telescope
-  --use "nvim-telescope/telescope.nvim"
+  use "nvim-telescope/telescope.nvim"
 --
   ---- Treesitter
   --use {
