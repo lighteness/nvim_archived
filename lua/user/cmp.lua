@@ -8,11 +8,17 @@ if not snip_status_ok then
   return
 end
 
+local lspkind_status_ok, lspkind= pcall(require, "lspkind")
+if not lspkind_status_ok then 
+  vim.notify("lspkind not found")
+  return
+end
+
+
 local has_words_before = function()
   local line, col = unpack(vim.api.nvim_win_get_cursor(0))
   return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
 end
-
 
 cmp.setup({
   snippet = {
@@ -61,7 +67,10 @@ cmp.setup({
     -- { name = 'snippy' }, -- For snippy users.
   }, {
     { name = 'buffer' },
-  })
+  }),
+  formatting = {
+    format = lspkind.cmp_format(),
+  },
 })
 
 -- Set configuration for specific filetype.
