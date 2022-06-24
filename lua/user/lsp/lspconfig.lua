@@ -44,8 +44,16 @@ end
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 for _, server in ipairs(servers) do
-  lspconfig[server].setup {
-    on_attach = on_attach,
-    capabilities = capabilities
-  }
+
+  local opts = {
+		on_attach = on_attach,
+		capabilities = capabilities,
+	}
+
+	local has_custom_opts, server_custom_opts = pcall(require, "user.lsp.settings." .. server)
+	if has_custom_opts then
+	 	opts = vim.tbl_deep_extend("force", server_custom_opts, opts)
+	end
+
+	lspconfig[server].setup(opts)
 end
