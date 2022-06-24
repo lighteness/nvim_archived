@@ -1,4 +1,4 @@
-require'nvim-treesitter.configs'.setup {
+require 'nvim-treesitter.configs'.setup {
   -- A list of parser names, or "all"
   ensure_installed = "all",
 
@@ -18,10 +18,10 @@ require'nvim-treesitter.configs'.setup {
   },
 }
 
-vim.opt.foldmethod=expr
-vim.opt.foldexpr=nvim_treesitter#foldexpr()
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 
 -- allow treesitter to download parser via pandavpn
 require("nvim-treesitter.install").command_extra_args = {
-    curl = { "--proxy", "http://127.0.0.1:41091" },
+  curl = { "--proxy", "http://127.0.0.1:41091" },
 }
