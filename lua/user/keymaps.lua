@@ -27,7 +27,7 @@ keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
-keymap("n", "<leader>e", ":Lex 30<cr>", opts)
+keymap("n", "<leader>e", ":Lex 30<CR>", opts)
 
 -- sodu Save
 keymap("n", "<leader>W", ":w !sudo tee % > /dev/null<CR>", opts)
@@ -69,3 +69,15 @@ keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
 keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
+
+-- DAP
+--keymap("n", "<leader>db", "<cmd>lua require'dap'.toggle_breakpoint()<cr>", opts)
+keymap("n", "<F8>", "<cmd>lua require'dap'.continue()<cr>", opts)
+keymap("n", "<F5>", "<cmd>lua require'dap'.step_into()<cr>", opts)
+keymap("n", "<F6>", "<cmd>lua require'dap'.step_over()<cr>", opts)
+keymap("n", "<F7>", "<cmd>lua require'dap'.step_out()<cr>", opts)
+--keymap("n", "<leader>dr", "<cmd>lua require'dap'.repl.toggle()<cr>", opts)
+--keymap("n", "<F8>", "<cmd>lua require'dap'.run_last()<cr>", opts)
+--keymap("n", "<leader>du", "<cmd>lua require'dapui'.toggle()<cr>", opts)
+--keymap("n", "<leader>dt", "<cmd>lua require'dap'.terminate()<cr>", opts)
+--
