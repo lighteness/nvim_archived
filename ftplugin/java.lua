@@ -31,11 +31,11 @@ JAVA_DAP_ACTIVE = true
 
 local bundles = {
   vim.fn.glob(
-    home .. "/.config/nvim/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-*.jar"
+    home .. "/.vscode/extensions/vscjava.vscode-java-debug-*/server/com.microsoft.java.debug.plugin-*.jar"
   ),
 }
 
-vim.list_extend(bundles, vim.split(vim.fn.glob(home .. "/.config/nvim/vscode-java-test/server/*.jar"), "\n"))
+vim.list_extend(bundles, vim.split(vim.fn.glob(home .. "/.vscode/extensions/vscjava.vscode-java-test-*/server/*.jar"), "\n"))
 
 
 local function on_attach(client, bufnr)
