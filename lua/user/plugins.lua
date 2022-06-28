@@ -96,8 +96,13 @@ return packer.startup(function(use)
 
   --use "JoosepAlviste/nvim-ts-context-commentstring"
   --
-  ---- Git
-  --use "lewis6991/gitsigns.nvim"
+  -- Git
+  use "lewis6991/gitsigns.nvim"
+  --use "f-person/git-blame.nvim"
+  --use "ruifm/gitlinker.nvim"
+  --use "mattn/vim-gist"
+  --use "mattn/webapi-vim"
+
 
   use 'mfussenegger/nvim-jdtls'
 
