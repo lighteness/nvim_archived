@@ -9,5 +9,6 @@ require "user.whichkey"
 require "user.treesitter"
 require "user.dap"
 require "user.gitsigns"
+require "user.git-blame"
 require "user.nvim-tree"
 require "user.vim-ultest".setup()
