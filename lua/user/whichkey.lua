@@ -159,6 +159,7 @@ local mappings = {
       "Workspace Symbols",
     },
   },
+
   s = {
     name = "Search",
     b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
@@ -171,16 +172,30 @@ local mappings = {
     C = { "<cmd>Telescope commands<cr>", "Commands" },
   },
 
+  --t = {
+  --name = "Terminal",
+  --n = { "<cmd>lua _NODE_TOGGLE()<cr>", "Node" },
+  --u = { "<cmd>lua _NCDU_TOGGLE()<cr>", "NCDU" },
+  --t = { "<cmd>lua _HTOP_TOGGLE()<cr>", "Htop" },
+  --p = { "<cmd>lua _PYTHON_TOGGLE()<cr>", "Python" },
+  --f = { "<cmd>ToggleTerm direction=float<cr>", "Float" },
+  --h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
+  --v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
+  --},
+
   t = {
-    name = "Terminal",
-    n = { "<cmd>lua _NODE_TOGGLE()<cr>", "Node" },
-    u = { "<cmd>lua _NCDU_TOGGLE()<cr>", "NCDU" },
-    t = { "<cmd>lua _HTOP_TOGGLE()<cr>", "Htop" },
-    p = { "<cmd>lua _PYTHON_TOGGLE()<cr>", "Python" },
-    f = { "<cmd>ToggleTerm direction=float<cr>", "Float" },
-    h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
-    v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
+    name = "Test",
+    S = { "<cmd>UltestSummary<cr>", "Summary" },
+    a = { "<cmd>Ultest<cr>", "All" },
+    d = { "<cmd>UltestDebug<cr>", "Debug" },
+    f = { "<cmd>TestFile<cr>", "File" },
+    l = { "<cmd>TestLast<cr>", "Last" },
+    n = { "<cmd>TestNearest<cr>", "Nearest" },
+    o = { "<cmd>UltestOutput<cr>", "Output" },
+    s = { "<cmd>TestSuite<cr>", "Suite" },
+    v = { "<cmd>TestVisit<cr>", "Visit" },
   },
+
   d = {
     name = "Debug",
     b = { "<cmd>lua require'dap'.toggle_breakpoint()<cr>", "Breakpoint" },

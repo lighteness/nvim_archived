@@ -10,3 +10,4 @@ require "user.treesitter"
 require "user.dap"
 require "user.gitsigns"
 require "user.nvim-tree"
+require "user.vim-ultest".setup()
