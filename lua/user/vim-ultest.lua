@@ -11,6 +11,8 @@
 	local function config_test()
 	  vim.api.nvim_exec(
 	    [[
+
+          let g:ultest_deprecation_notice = 0
 	        " Test config
 	        let test#strategy = "neovim"
 	        let test#neovim#term_position = "belowright"
