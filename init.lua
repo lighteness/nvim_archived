@@ -11,4 +11,5 @@ require "user.dap"
 require "user.gitsigns"
 require "user.git-blame"
 require "user.nvim-tree"
+require "user.toggleterm"
 require "user.vim-ultest".setup()
