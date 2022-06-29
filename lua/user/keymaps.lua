@@ -80,4 +80,6 @@ keymap("n", "<F7>", "<cmd>lua require'dap'.step_out()<cr>", opts)
 --keymap("n", "<F8>", "<cmd>lua require'dap'.run_last()<cr>", opts)
 --keymap("n", "<leader>du", "<cmd>lua require'dapui'.toggle()<cr>", opts)
 --keymap("n", "<leader>dt", "<cmd>lua require'dap'.terminate()<cr>", opts)
+
 --
+keymap("n", "<F3>", "<cmd>TagbarToggle<cr>", opts)
