@@ -208,6 +208,17 @@ local mappings = {
     u = { "<cmd>lua require'dapui'.toggle()<cr>", "UI" },
     x = { "<cmd>lua require'dap'.terminate()<cr>", "Exit" },
   },
+
+  j = {
+    name = "Java",
+    o = { "<Cmd>lua require'jdtls'.organize_imports()<CR>", "organize_imports"},
+    v = { "<Cmd>lua require('jdtls').extract_variable()<CR>","extract_variable"},
+    c = { "<Cmd>lua require('jdtls').extract_constant()<CR>","extract_constant"},
+    m = { "<Esc><Cmd>lua require('jdtls').extract_method(true)<CR>","extract_method"},
+    t = { "<Cmd>lua require'jdtls'.test_nearest_method()<CR>","test_nearest_method"},
+    T = { "<Cmd>lua require'jdtls'.test_class()<CR>", "test_class"},
+  },
+
 }
 
 which_key.setup(setup)
