@@ -22,9 +22,9 @@
 	        let test#python#runner = 'pyunit'
 	        " let test#python#runner = 'pytest'
 	        " Javascript
-	        let test#javascript#reactscripts#options = "--watchAll=false"
-	        let g:test#javascript#runner = 'jest'
-	        let g:test#javascript#cypress#executable = 'npx cypress run-ct'
+	        "let test#javascript#reactscripts#options = "--watchAll=false"
+	        "let g:test#javascript#runner = 'jest'
+	        "let g:test#javascript#cypress#executable = 'npx cypress run-ct'
           " go
           let g:test#go#runner = 'gotest'
 	    ]],
