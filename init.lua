@@ -14,4 +14,5 @@ require "user.nvim-tree"
 require "user.toggleterm"
 require "user.alpha"
 require "user.project"
+require "user.hop"
 require "user.vim-ultest".setup()

@@ -96,6 +96,14 @@ local mappings = {
   ["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
   ["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
 
+  ["<leader>"] = {
+    name = "Hop",
+    l = {"<cmd>HopWordCurrentLine<cr>","current line"},
+    m = {"<cmd>HopAnywhereMW<cr>","multi windows"},
+    w = {"<cmd>HopWord<cr>","word"},
+    c = {"<cmd>HopChar1<cr>","HopChar1"},
+    L = {"<cmd>HopLine<cr>","HopLine"},
+  },
   p = {
     name = "Packer",
     c = { "<cmd>PackerCompile<cr>", "Compile" },
@@ -218,6 +226,7 @@ local mappings = {
     t = { "<Cmd>lua require'jdtls'.test_nearest_method()<CR>","test_nearest_method"},
     T = { "<Cmd>lua require'jdtls'.test_class()<CR>", "test_class"},
   },
+
 
 }
 
