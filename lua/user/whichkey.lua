@@ -56,7 +56,7 @@ local setup = {
     align = "left", -- align columns left, center or right
   },
   ignore_missing = true, -- enable this to hide mappings for which you didn't specify a label
-  hidden = { "<silent>", "<cmd>", "<Cmd>", "<CR>", "call", "lua", "^:", "^ " }, -- hide mapping boilerplate
+  hidden = { "<silent>", "<cmd>", "<Cmd>", "<cr>", "call", "lua", "^:", "^ " }, -- hide mapping boilerplate
   show_help = true, -- show help message on the command line when the popup is visible
   triggers = "auto", -- automatically setup triggers
   -- triggers = {"<leader>"} -- or specify a list manually
@@ -85,10 +85,10 @@ local mappings = {
     "Buffers",
   },
   ["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
-  ["w"] = { "<cmd>w!<CR>", "Save" },
-  ["q"] = { "<cmd>q!<CR>", "Quit" },
-  ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
-  ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
+  ["w"] = { "<cmd>w!<cr>", "Save" },
+  ["q"] = { "<cmd>q!<cr>", "Quit" },
+  ["c"] = { "<cmd>Bdelete!<cr>", "Close Buffer" },
+  ["h"] = { "<cmd>nohlsearch<cr>", "No Highlight" },
   ["f"] = {
     "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
     "Find files",
@@ -115,7 +115,7 @@ local mappings = {
 
   g = {
     name = "Git",
-    g = { "<cmd>lua _LAZYGIT_TOGGLE()<CR>", "Lazygit" },
+    g = { "<cmd>lua _LAZYGIT_TOGGLE()<cr>", "Lazygit" },
     j = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", "Next Hunk" },
     k = { "<cmd>lua require 'gitsigns'.prev_hunk()<cr>", "Prev Hunk" },
     l = { "<cmd>lua require 'gitsigns'.blame_line()<cr>", "Blame" },
@@ -151,7 +151,7 @@ local mappings = {
     i = { "<cmd>LspInfo<cr>", "Info" },
     I = { "<cmd>LspInstallInfo<cr>", "Installer Info" },
     j = {
-      "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>",
+      "<cmd>lua vim.lsp.diagnostic.goto_next()<cr>",
       "Next Diagnostic",
     },
     k = {
@@ -219,12 +219,12 @@ local mappings = {
 
   j = {
     name = "Java",
-    o = { "<Cmd>lua require'jdtls'.organize_imports()<CR>", "organize_imports"},
-    v = { "<Cmd>lua require('jdtls').extract_variable()<CR>","extract_variable"},
-    c = { "<Cmd>lua require('jdtls').extract_constant()<CR>","extract_constant"},
-    m = { "<Esc><Cmd>lua require('jdtls').extract_method(true)<CR>","extract_method"},
-    t = { "<Cmd>lua require'jdtls'.test_nearest_method()<CR>","test_nearest_method"},
-    T = { "<Cmd>lua require'jdtls'.test_class()<CR>", "test_class"},
+    o = { "<Cmd>lua require'jdtls'.organize_imports()<cr>", "organize_imports"},
+    v = { "<Cmd>lua require('jdtls').extract_variable()<cr>","extract_variable"},
+    c = { "<Cmd>lua require('jdtls').extract_constant()<cr>","extract_constant"},
+    m = { "<Esc><Cmd>lua require('jdtls').extract_method(true)<cr>","extract_method"},
+    t = { "<Cmd>lua require'jdtls'.test_nearest_method()<cr>","test_nearest_method"},
+    T = { "<Cmd>lua require'jdtls'.test_class()<cr>", "test_class"},
   },
 
 
