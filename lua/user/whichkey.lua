@@ -231,8 +231,8 @@ local mappings = {
 
   r = {
     name = "refactoring",
-    b = { "<cmd>lua require('refactoring').refactor(Extract Block)<cr>", "Inline Variable" },
-    i = { "<cmd>lua require('refactoring').refactor(Inline Variable)<cr>", "Inline Variable" },
+    b = { "<cmd>lua require('refactoring').refactor('Extract Block')<cr>", "Extract Block" },
+    i = { "<cmd>lua require('refactoring').refactor('Inline Variable')<cr>", "Inline Variable" },
   }
 
 
