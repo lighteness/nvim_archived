@@ -122,7 +122,10 @@ return packer.startup(function(use)
     run = ":UpdateRemotePlugins"
   }
 
+  use "ThePrimeagen/refactoring.nvim"
+
   use 'majutsushi/tagbar'
+
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

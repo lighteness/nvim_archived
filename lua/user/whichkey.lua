@@ -217,6 +217,8 @@ local mappings = {
     x = { "<cmd>lua require'dap'.terminate()<cr>", "Exit" },
   },
 
+
+
   j = {
     name = "Java",
     o = { "<Cmd>lua require'jdtls'.organize_imports()<cr>", "organize_imports"},
@@ -227,8 +229,34 @@ local mappings = {
     T = { "<Cmd>lua require'jdtls'.test_class()<cr>", "test_class"},
   },
 
+  r = {
+    name = "refactoring",
+    b = { "<cmd>lua require('refactoring').refactor(Extract Block)<cr>", "Inline Variable" },
+    i = { "<cmd>lua require('refactoring').refactor(Inline Variable)<cr>", "Inline Variable" },
+  }
+
 
 }
 
+local mappingsForV = {
+  r = {
+    name = "refactoring",
+    e = { "<Esc><cmd>lua require('refactoring').refactor('Extract Function')<cr>", "Extract Function" },
+    v = { "<Esc><Cmd>lua require('refactoring').refactor('Extract Variable')<cr>", "Extract Variable" },
+    i = { "<Esc><cmd>lua require('refactoring').refactor('Inline Variable')<cr>", "Inline Variable" },
+    r = { "<Esc><cmd>lua require('refactoring').select_refactor()<cr>", "select_refactor" },
+
+
+  }
+}
+local optsForV = {
+  mode = "v", -- NORMAL mode
+  prefix = "<leader>",
+  buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
+  silent = true, -- use `silent` when creating keymaps
+  noremap = true, -- use `noremap` when creating keymaps
+  nowait = true, -- use `nowait` when creating keymaps
+}
 which_key.setup(setup)
 which_key.register(mappings, opts)
+which_key.register(mappingsForV, optsForV)
