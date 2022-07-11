@@ -98,11 +98,11 @@ local mappings = {
 
   ["<leader>"] = {
     name = "Hop",
-    l = {"<cmd>HopWordCurrentLine<cr>","current line"},
-    m = {"<cmd>HopAnywhereMW<cr>","multi windows"},
-    w = {"<cmd>HopWord<cr>","word"},
-    c = {"<cmd>HopChar1<cr>","HopChar1"},
-    L = {"<cmd>HopLine<cr>","HopLine"},
+    l = { "<cmd>HopWordCurrentLine<cr>", "current line" },
+    m = { "<cmd>HopAnywhereMW<cr>", "multi windows" },
+    w = { "<cmd>HopWord<cr>", "word" },
+    c = { "<cmd>HopChar1<cr>", "HopChar1" },
+    L = { "<cmd>HopLine<cr>", "HopLine" },
   },
   p = {
     name = "Packer",
@@ -221,12 +221,12 @@ local mappings = {
 
   j = {
     name = "Java",
-    o = { "<Cmd>lua require'jdtls'.organize_imports()<cr>", "organize_imports"},
-    v = { "<Cmd>lua require('jdtls').extract_variable()<cr>","extract_variable"},
-    c = { "<Cmd>lua require('jdtls').extract_constant()<cr>","extract_constant"},
-    m = { "<Esc><Cmd>lua require('jdtls').extract_method(true)<cr>","extract_method"},
-    t = { "<Cmd>lua require'jdtls'.test_nearest_method()<cr>","test_nearest_method"},
-    T = { "<Cmd>lua require'jdtls'.test_class()<cr>", "test_class"},
+    o = { "<Cmd>lua require'jdtls'.organize_imports()<cr>", "organize_imports" },
+    v = { "<Cmd>lua require('jdtls').extract_variable()<cr>", "extract_variable" },
+    c = { "<Cmd>lua require('jdtls').extract_constant()<cr>", "extract_constant" },
+    m = { "<Esc><Cmd>lua require('jdtls').extract_method(true)<cr>", "extract_method" },
+    t = { "<Cmd>lua require'jdtls'.test_nearest_method()<cr>", "test_nearest_method" },
+    T = { "<Cmd>lua require'jdtls'.test_class()<cr>", "test_class" },
   },
 
   r = {
