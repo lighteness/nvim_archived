@@ -225,8 +225,8 @@ local mappings = {
     v = { "<Cmd>lua require('jdtls').extract_variable()<cr>", "extract_variable" },
     c = { "<Cmd>lua require('jdtls').extract_constant()<cr>", "extract_constant" },
     m = { "<Esc><Cmd>lua require('jdtls').extract_method(true)<cr>", "extract_method" },
-    t = { "<Cmd>lua require'jdtls'.test_nearest_method()<cr>", "test_nearest_method" },
-    T = { "<Cmd>lua require'jdtls'.test_class()<cr>", "test_class" },
+    n = { "<Cmd>lua require'jdtls'.test_nearest_method()<cr>", "test_nearest_method" },
+    t = { "<Cmd>lua require'jdtls'.test_class()<cr>", "test_class" },
   },
 
   r = {
