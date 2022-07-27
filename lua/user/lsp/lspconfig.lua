@@ -48,10 +48,10 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', '<space>wl', function()
     print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
   end, bufopts)
- -- vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition, bufopts)
+  -- vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition, bufopts)
   --vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, bufopts)
   --vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
---  vim.keymap.set('n', '<space>f', vim.lsp.buf.formatting, bufopts)
+  --  vim.keymap.set('n', '<space>f', vim.lsp.buf.formatting, bufopts)
 end
 
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
@@ -59,14 +59,14 @@ local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protoco
 for _, server in ipairs(servers) do
 
   local opts = {
-		on_attach = on_attach,
-		capabilities = capabilities,
-	}
+    on_attach = on_attach,
+    capabilities = capabilities,
+  }
 
-	local has_custom_opts, server_custom_opts = pcall(require, "user.lsp.settings." .. server)
-	if has_custom_opts then
-	 	opts = vim.tbl_deep_extend("force", server_custom_opts, opts)
-	end
+  local has_custom_opts, server_custom_opts = pcall(require, "user.lsp.settings." .. server)
+  if has_custom_opts then
+    opts = vim.tbl_deep_extend("force", server_custom_opts, opts)
+  end
 
-	lspconfig[server].setup(opts)
+  lspconfig[server].setup(opts)
 end
