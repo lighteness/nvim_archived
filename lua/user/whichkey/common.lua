@@ -198,7 +198,7 @@ function M.misc()
       "Buffers",
     },
     ["q"] = { "<cmd>q!<cr>", "Quit" },
-    ["c"] = { "<cmd>Bdelete!<cr>", "Close Buffer" },
+    ["c"] = { "<cmd>bdelete!<cr>", "Close Buffer" },
     ["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
     ["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
 

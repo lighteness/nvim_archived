@@ -151,6 +151,7 @@ function register_for_common()
     common.search,
     common.termial,
     common.misc,
+    common.find,
   }
   for _, fn in ipairs(list) do
     which_key.register(fn(), opts)
