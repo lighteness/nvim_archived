@@ -163,6 +163,27 @@ function M.termial()
   }
 end
 
+function M.find()
+  return {
+    f = {
+      name = "Find",
+      b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
+      c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
+      f = { "<cmd>Telescope find_files<cr>", "Find files" },
+      t = { "<cmd>Telescope live_grep<cr>", "Find Text" },
+      s = { "<cmd>Telescope grep_string<cr>", "Find String" },
+      h = { "<cmd>Telescope help_tags<cr>", "Help" },
+      H = { "<cmd>Telescope highlights<cr>", "Highlights" },
+      i = { "<cmd>lua require('telescope').extensions.media_files.media_files()<cr>", "Media" },
+      l = { "<cmd>Telescope resume<cr>", "Last Search" },
+      M = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
+      r = { "<cmd>Telescope oldfiles<cr>", "Recent File" },
+      R = { "<cmd>Telescope registers<cr>", "Registers" },
+      k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
+      C = { "<cmd>Telescope commands<cr>", "Commands" },
+    },
+  }
+end
 
 function M.misc()
   return {
@@ -176,10 +197,6 @@ function M.misc()
     ["q"] = { "<cmd>q!<cr>", "Quit" },
     ["c"] = { "<cmd>Bdelete!<cr>", "Close Buffer" },
     ["h"] = { "<cmd>nohlsearch<cr>", "No Highlight" },
-    ["f"] = {
-      "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
-      "Find files",
-    },
     ["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
     ["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
 
