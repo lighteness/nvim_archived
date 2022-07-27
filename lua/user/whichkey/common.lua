@@ -190,15 +190,15 @@ function M.misc()
     a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Action" },
     v = { "<cmd>vsplit<cr>", "vsplit" },
     h = { "<cmd>split<cr>", "split" },
+    w = { "<cmd>w<CR>", "Write" },
+    ["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
+
     ["b"] = {
       "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
       "Buffers",
     },
-    ["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
-    ["w"] = { "<cmd>w!<cr>", "Save" },
     ["q"] = { "<cmd>q!<cr>", "Quit" },
     ["c"] = { "<cmd>Bdelete!<cr>", "Close Buffer" },
-    ["h"] = { "<cmd>nohlsearch<cr>", "No Highlight" },
     ["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
     ["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
 
@@ -206,14 +206,16 @@ function M.misc()
 
 
 
-
+    --[[
     r = {
       name = "refactoring",
       b = { "<cmd>lua require('refactoring').refactor('Extract Block')<cr>", "Extract Block" },
       i = { "<cmd>lua require('refactoring').refactor('Inline Variable')<cr>", "Inline Variable" },
     }
+    --]]
 
 
   }
 end
+
 return M
