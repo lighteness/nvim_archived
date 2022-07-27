@@ -188,6 +188,8 @@ end
 function M.misc()
   return {
     a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Action" },
+    v = { "<cmd>vsplit<cr>", "vsplit" },
+    h = { "<cmd>split<cr>", "split" },
     ["b"] = {
       "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
       "Buffers",
