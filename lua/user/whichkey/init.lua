@@ -165,9 +165,9 @@ function setup()
 
   register_for("java", {
     java.test_for_java,
-    java.refactoring_in_normal_mod,
+    java.refactoring_in_the_mod_of("normal"),
   }, {
-    java.refactoring_in_visual_mod
+    java.refactoring_in_the_mod_of("visual"),
   })
 end
 
