@@ -82,5 +82,4 @@ keymap("n", "<F7>", "<cmd>lua require'dap'.step_out()<cr>", opts)
 --keymap("n", "<leader>dt", "<cmd>lua require'dap'.terminate()<cr>", opts)
 
 -- Toggle Tagbar
-keymap("n", "<F3>", "<cmd>TagbarToggle<cr>", opts)
-
+keymap("n", "<F1>", "<cmd>TagbarToggle<cr>", opts)
