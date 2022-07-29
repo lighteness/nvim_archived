@@ -1,3 +1,4 @@
+M = {}
 local lspconfig = require("lspconfig")
 
 local servers = require("user.lsp.const").servers
@@ -25,15 +26,7 @@ local function lsp_highlight_document(client)
   -- end
 end
 
--- Use an on_attach function to only map the following keys
--- after the language server attaches to the current buffer
-local on_attach = function(client, bufnr)
-  -- use illuminate
-  lsp_highlight_document(client)
-
-  -- Enable completion triggered by <c-x><c-o>
-  vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
-
+local function bindLspKeymap(bufnr)
   -- Mappings.
   -- See `:help vim.lsp.*` for documentation on any of the below functions
   local bufopts = { noremap = true, silent = true, buffer = bufnr }
@@ -52,21 +45,40 @@ local on_attach = function(client, bufnr)
   --vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, bufopts)
   --vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
   --  vim.keymap.set('n', '<space>f', vim.lsp.buf.formatting, bufopts)
+
 end
 
-local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+-- Use an on_attach function to only map the following keys
+-- after the language server attaches to the current buffer
+local on_attach = function(client, bufnr)
+  -- use illuminate
+  lsp_highlight_document(client)
 
-for _, server in ipairs(servers) do
+  -- Enable completion triggered by <c-x><c-o>
+  vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
-  local opts = {
-    on_attach = on_attach,
-    capabilities = capabilities,
-  }
+  bindLspKeymap(bufnr)
 
-  local has_custom_opts, server_custom_opts = pcall(require, "user.lsp.settings." .. server)
-  if has_custom_opts then
-    opts = vim.tbl_deep_extend("force", server_custom_opts, opts)
+end
+
+function M.setup()
+  local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+
+  for _, server in ipairs(servers) do
+
+    local opts = {
+      on_attach = on_attach,
+      capabilities = capabilities,
+    }
+
+    local has_custom_opts, server_custom_opts = pcall(require, "user.lsp.settings." .. server)
+    if has_custom_opts then
+      opts = vim.tbl_deep_extend("force", server_custom_opts, opts)
+    end
+
+    lspconfig[server].setup(opts)
   end
 
-  lspconfig[server].setup(opts)
 end
+
+return M
