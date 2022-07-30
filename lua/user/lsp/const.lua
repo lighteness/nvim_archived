@@ -1,3 +1,3 @@
 return {
- servers = { "jsonls", "sumneko_lua", "tsserver" }
+ servers = { "jsonls", "sumneko_lua", "tsserver","gopls" }
 }
