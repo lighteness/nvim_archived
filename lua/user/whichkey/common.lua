@@ -5,6 +5,7 @@ function M.Hop()
   return {
     ["<leader>"] = {
       name = "Hop",
+      a = { "<cmd>HopAnywhere<cr>", "anywhere" },
       l = { "<cmd>HopWordCurrentLine<cr>", "current line" },
       m = { "<cmd>HopAnywhereMW<cr>", "multi windows" },
       w = { "<cmd>HopWord<cr>", "word" },
