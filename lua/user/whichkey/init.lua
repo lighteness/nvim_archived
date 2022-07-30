@@ -169,6 +169,10 @@ function setup()
   }, {
     java.refactoring_in_the_mod_of("visual"),
   })
+
+  which_key.register({
+    a = { "<Esc><cmd>lua vim.lsp.buf.code_action()<cr>", "Action" },
+  },opts_for_visual_node())
 end
 
 setup()
