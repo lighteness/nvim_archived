@@ -121,10 +121,20 @@ return packer.startup(function(use)
     requires = { "vim-test/vim-test" },
     run = ":UpdateRemotePlugins"
   }
+  use {
+    "nvim-neotest/neotest",
+    requires = {
+      "nvim-lua/plenary.nvim",
+      "nvim-treesitter/nvim-treesitter",
+      "antoinemadec/FixCursorHold.nvim"
+    }
+  }
+  use "nvim-neotest/neotest-vim-test"
 
   use "ThePrimeagen/refactoring.nvim"
 
   use 'majutsushi/tagbar'
+
 
 
   -- Automatically set up your configuration after cloning packer.nvim
