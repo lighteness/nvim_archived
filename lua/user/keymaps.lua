@@ -83,3 +83,5 @@ keymap("n", "<F7>", "<cmd>lua require'dap'.step_out()<cr>", opts)
 
 -- Toggle Tagbar
 keymap("n", "<F1>", "<cmd>TagbarToggle<cr>", opts)
+-- formatting
+keymap("n", "<S-f>", "<cmd>lua vim.lsp.buf.formatting()<cr>", opts)
