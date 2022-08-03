@@ -16,5 +16,6 @@ require "user.alpha"
 require "user.project"
 require "user.hop"
 require "user.refactoring"
-require "user.vim-ultest".setup()
+--require "user.vim-ultest".setup()
+require "user.neotest"
 require "user.auto-save"
