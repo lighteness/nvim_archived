@@ -17,3 +17,4 @@ require "user.project"
 require "user.hop"
 require "user.refactoring"
 require "user.vim-ultest".setup()
+require "user.auto-save"
