@@ -19,3 +19,4 @@ require "user.refactoring"
 --require "user.vim-ultest".setup()
 require "user.neotest"
 require "user.auto-save"
+require "user.snippets"
