@@ -135,6 +135,7 @@ return packer.startup(function(use)
 
   use 'majutsushi/tagbar'
 
+  use 'Pocco81/auto-save.nvim'
 
 
   -- Automatically set up your configuration after cloning packer.nvim
