@@ -31,6 +31,10 @@ dapui.setup {
   },
 }
 
+-- where the dap-terimial will be opened
+-- The `terminal_win_cmd` defaults to `belowright new`
+--dap.defaults.fallback.terminal_win_cmd = '50vsplit new'
+
 vim.fn.sign_define("DapBreakpoint", { text = "", texthl = "DiagnosticSignError", linehl = "", numhl = "" })
 
 dap.listeners.after.event_initialized["dapui_config"] = function()
