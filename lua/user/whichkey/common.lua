@@ -34,6 +34,15 @@ function M.debug()
   }
 end
 
+function M.debug_v_mode()
+  return {
+    d = {
+      name = "Debug",
+      e = { "<cmd>lua require'dapui'.eval()<cr>", "eval" },
+    },
+  }
+end
+
 function M.test()
   return {
     t = {

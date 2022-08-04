@@ -159,9 +159,22 @@ function register_for_common()
 
 end
 
+function register_for_common_in_visual_mode()
+  local list = {
+    common.debug_v_mode
+  }
+  for _, fn in ipairs(list) do
+    which_key.register(fn(), opts_for_visual_node())
+  end
+
+end
+
 function setup()
+
   which_key.setup(opt())
+
   register_for_common()
+  register_for_common_in_visual_mode()
 
   register_for("java", {
     java.test_for_java,
