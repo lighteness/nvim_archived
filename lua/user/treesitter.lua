@@ -20,6 +20,8 @@ require 'nvim-treesitter.configs'.setup {
 
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+--vim.opt.foldlevel = 3
+vim.opt.foldenable = false
 
 -- allow treesitter to download parser via pandavpn
 require("nvim-treesitter.install").command_extra_args = {
