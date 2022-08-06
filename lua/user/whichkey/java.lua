@@ -35,6 +35,7 @@ function M.test_for_java()
       name = "Test",
       n = { "<Cmd>lua require'jdtls'.test_nearest_method()<cr>", "test_nearest_method" },
       t = { "<Cmd>lua require'jdtls'.test_class()<cr>", "test_class" },
+      f = { "<Cmd>lua require'jdtls'.test_class()<cr>", "test_all_in_class" },
       m = {
         name = "maven test",
         m = {"<Cmd>TestNearest<cr>", "test_nearest_method"},
