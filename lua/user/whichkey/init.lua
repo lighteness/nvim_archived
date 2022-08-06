@@ -5,6 +5,7 @@ end
 
 local common = require("user.whichkey.common")
 local java = require("user.whichkey.java")
+local go = require("user.whichkey.go")
 
 local mappingsForV = {
   r = {
@@ -183,9 +184,15 @@ function setup()
     java.refactoring_in_the_mod_of("visual"),
   })
 
+  register_for("go", {
+    go.test,
+  }, {
+  })
+
   which_key.register({
     a = { "<Esc><cmd>lua vim.lsp.buf.code_action()<cr>", "Action" },
-  },opts_for_visual_node())
+  }, opts_for_visual_node())
+
 end
 
 setup()

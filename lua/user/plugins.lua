@@ -122,15 +122,19 @@ return packer.startup(function(use)
     requires = { "vim-test/vim-test" },
     run = ":UpdateRemotePlugins"
   }
+
   use {
     "nvim-neotest/neotest",
     requires = {
+      "vim-test/vim-test",
       "nvim-lua/plenary.nvim",
       "nvim-treesitter/nvim-treesitter",
-      "antoinemadec/FixCursorHold.nvim"
+      "antoinemadec/FixCursorHold.nvim",
+
+      'nvim-neotest/neotest-go',
+      "nvim-neotest/neotest-vim-test"
     }
   }
-  use "nvim-neotest/neotest-vim-test"
 
   use "ThePrimeagen/refactoring.nvim"
 

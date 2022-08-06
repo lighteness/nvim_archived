@@ -1,6 +1,9 @@
 require("neotest").setup({
-  require("neotest-vim-test")({ allow_file_types = { "java" } }),
+  adapters = {
+    require('neotest-go'),
+    require("neotest-vim-test"),
 
+  },
 })
 
 
@@ -9,4 +12,4 @@ vim.api.nvim_exec([[
 
   "  let test#java#runner = 'gradletest'
 
-]],false)
+]], false)
