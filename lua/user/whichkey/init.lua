@@ -126,7 +126,7 @@ function register_for(fileTypePattern, list_n, list_v)
 
   vim.api.nvim_create_autocmd("FileType", {
     once = true,
-    group = vim.api.nvim_create_augroup("whichkey", { clear = true }),
+    group = vim.api.nvim_create_augroup("whichkey" .. "-" .. fileTypePattern, { clear = true }),
     pattern = fileTypePattern,
     callback = function()
 
