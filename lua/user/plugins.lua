@@ -120,7 +120,9 @@ return packer.startup(function(use)
   --test
   use {
     "rcarriga/vim-ultest",
-    requires = { "vim-test/vim-test" },
+    requires = {
+      "vim-test/vim-test",
+    },
     run = ":UpdateRemotePlugins"
   }
 
