@@ -141,6 +141,8 @@ return packer.startup(function(use)
 
   use 'majutsushi/tagbar'
 
+  use 'ybian/smartim'
+
   use 'Pocco81/auto-save.nvim'
 
 
