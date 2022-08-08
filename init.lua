@@ -21,3 +21,5 @@ require "user.neotest"
 require "user.auto-save"
 require "user.snippets"
 require "user.dap-go"
+require "user.locale"
+
