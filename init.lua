@@ -23,3 +23,4 @@ require "user.snippets"
 require "user.dap-go"
 require "user.locale"
 
+require "user.autopairs"
