@@ -148,6 +148,8 @@ return packer.startup(function(use)
 
   use 'Pocco81/auto-save.nvim'
 
+    -- Comment
+  use "numToStr/Comment.nvim"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

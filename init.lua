@@ -24,3 +24,4 @@ require "user.dap-go"
 require "user.locale"
 
 require "user.autopairs"
+require "user.comment"
