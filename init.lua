@@ -22,6 +22,6 @@ require "user.auto-save"
 require "user.snippets"
 require "user.dap-go"
 require "user.locale"
-
 require "user.autopairs"
 require "user.comment"
+require "user.todo-comments"
