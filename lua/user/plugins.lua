@@ -152,7 +152,7 @@ return packer.startup(function(use)
 
   use 'Pocco81/auto-save.nvim'
 
-    -- Comment
+  -- Comment
   use "numToStr/Comment.nvim"
   use "folke/todo-comments.nvim"
 
