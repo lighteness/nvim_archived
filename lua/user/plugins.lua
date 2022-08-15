@@ -119,6 +119,8 @@ return packer.startup(function(use)
   use { "rcarriga/nvim-dap-ui" }
   use { "ravenxrz/DAPInstall.nvim", commit = "8798b4c36d33723e7bba6ed6e2c202f84bb300de" }
   use { "leoluz/nvim-dap-go" }
+  use { "jbyuki/one-small-step-for-vimkind" }
+
 
   --test
   use {
