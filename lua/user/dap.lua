@@ -33,7 +33,16 @@ dapui.setup {
 
 -- where the dap-terimial will be opened
 -- The `terminal_win_cmd` defaults to `belowright new`
---dap.defaults.fallback.terminal_win_cmd = '50vsplit new'
+--  dap.defaults.fallback.terminal_win_cmd = '50vsplit new'
+--  dap.defaults.fallback.focus_terminal = true
+
+-- force use external terimial
+dap.defaults.fallback.force_external_terminal = true
+dap.defaults.fallback.external_terminal = {
+  command = '/usr/local/bin/alacritty';
+  args = { '-e' };
+}
+
 
 vim.fn.sign_define("DapBreakpoint", { text = "", texthl = "DiagnosticSignError", linehl = "", numhl = "" })
 
