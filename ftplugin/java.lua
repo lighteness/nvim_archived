@@ -69,7 +69,7 @@ local function on_attach(client, bufnr)
   require("jdtls.dap").setup_dap_main_class_configs()
   --end
   client.resolved_capabilities.document_formatting = false
-  client.resolved_capabilities.textDocument.completion.completionItem.snippetSupport = false
+  client.resolved_capabilities.textDocument.completion.completionItem.snippetSupport = true
   --end
 
   --  M.capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -105,6 +105,7 @@ local config = {
 
     -- 💀
     "-jar",
+    --vim.fn.glob(home .. "/.vscode/extensions/redhat.java-*/server/plugins/org.eclipse.equinox.launcher_*.jar"),
     vim.fn.glob(home .. "/.local/share/nvim/lsp_servers/jdtls/plugins/org.eclipse.equinox.launcher_*.jar"),
     -- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^                                       ^^^^^^^^^^^^^^
     -- Must point to the                                                     Change this to
